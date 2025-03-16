@@ -1,10 +1,15 @@
-import './App.css';
+import { Provider, useSelector } from "react-redux";
+import Body from "./components/Body";
+import appStore from "./utlis/appStore";
 
 function App() {
   return (
-    <div className="font-bold text-3xl text-green-700">
-      Hello
+    <Provider store={appStore}>
+      <div>
+      <Body/>
     </div>
+    </Provider>
+    
   );
 }
 
